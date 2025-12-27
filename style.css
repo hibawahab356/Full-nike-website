@@ -12,10 +12,6 @@
     font-family: bebas;
     src: url(./fonts/BebasNeue-Regular.ttf);
 }
-        body {
-           
-            color: #333;
-        }
 
         /* header start */
         header {
@@ -25,7 +21,10 @@
            align-items: center;
            justify-content: space-between;
            padding: 20px 86px;
-          
+           box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+         position: fixed;
+         top: 0;
+         z-index: 1000;
         }
 
         .logo {
@@ -407,180 +406,9 @@
             text-decoration: none;
         }
 
-        /* Tablet devices (768px and below) */
-        @media (max-width: 768px) {
-            /* Header adjustments */
-             header {
-               
-                padding: 15px 45px;
-                gap: 20px;
-                display: flex;
-                justify-content: space-between;
-            }
-           
-            .logo {
-                font-size: 18px;
-                width: 62%;
-            }
+        
 
-             header .logodiv{
-                width: 50%;
-            }
-
-            .logo .logodiv img{
-                width: 100%;
-            }
-
-
-            nav {
-               display: none;
-            }
-
-            .nav-lists{
-                display: none;
-            }
-             .icon{
-                display: block;
-             }
-
-            /* hero start */
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding: 62px 20px 40px;
-            }
-             .hero .villan{
-                width: 70%;
-                display: flex;
-                align-items: center;
-                gap: 40px;
-             }
-            .shoe-img{
-                width: 328px;
-            }
-             .hero-text{
-                padding: 0;
-             }
-            .hero-text h1 {
-                font-size: 40px;
-            }
-
-            .hero-text h2 {
-                font-size: 40px;
-            }
-
-            .hero-text p {
-                font-size: 18px;
-            }
-
-            .click {
-                padding: 10px 20px;
-                font-size: 13px;
-            }
-
-
-            /* wardrobe Sections */
-            .wardrobe{
-                padding: 40px 20px;
-            }
-
-            .casual {
-                font-size: 24px;
-                margin-bottom: 30px;
-            }
-
-            /* Products Grid */
-            .layout{
-                flex-direction: column;
-            }
-
-            .collect{
-                max-width: 100%;
-                min-width: 100%;
-                width: 80%;
-                height: 50%;
-            }
-
-            .collect-img {
-                height: 520px;
-            }
-            .info{
-                font-size: 16px;
-            }
-           
-            /* Features */
-            .disply {
-                padding: 40px 20px;
-                flex-direction: column;
-            }
-            .cart{
-                order: -1;
-            }
-            .dinfo p{
-                font-size: 19px;
-            }
-            .direction,
-            .cart {
-                min-width: 100%;
-            }
-
-            .direct{
-                padding: 20px;
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-            }
-
-            /* app*/
-            .app {
-                padding: 30px 20px;
-                /* margin: 30px 20px; */
-            }
-
-            .app h3 {
-                font-size: 20px;
-                /* margin-bottom: 20px; */
-            }
-
-            .apple {
-                flex-direction: column;
-                font-size: 19px;
-            }
-            .apple input{
-              
-                font-size: 21px;
-            }
-            .apple button{
-              
-                font-size: 21px;
-            }
-
-            .apple input,
-            .apple button {
-                width: 100%;
-            }
-
-            /* Footer */
-            footer {
-                padding: 30px 20px;
-            }
-
-            .foot {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .foot {
-                min-width: 100%;
-                text-align: center;
-            }
-            .foot ul li a {
-                font-size: 19px;
-            }
-        }
-
-        /* Small mobile devices (480px and below) */
+        /* media queries 480 below range */
         @media (max-width: 480px) {
             header {
                
@@ -711,6 +539,9 @@
             .dinfo p {
                 font-size: 12px;
             }
+           .cart{
+                order: -1;
+            }
 
             .app {
                 padding: 25px 15px;
@@ -748,7 +579,7 @@
             }
         }
 
-        /* Extra small devices (360px and below) */
+        /* small mobiles media queries*/
         @media (max-width: 360px) {
             .logo {
                 font-size: 16px;
@@ -767,6 +598,9 @@
             .shoe-img {
                 width: 240px;
             }
+               .cart{
+                order: -1;
+            }
 
             .hero-text h1 {
                 font-size: 24px;
@@ -782,5 +616,181 @@
 
             .collect-image {
                 height: 180px;
+            }
+        }
+            
+        /* tablet 768 below range media queries */
+        @media (max-width: 768px) {
+            /* Header */
+             header {
+               
+                padding: 15px 45px;
+                gap: 20px;
+                display: flex;
+                justify-content: space-between;
+            }
+           
+            .logo {
+                font-size: 18px;
+                width: 62%;
+            }
+
+             header .logodiv{
+                width: 50%;
+            }
+
+            .logo .logodiv img{
+                width: 100%;
+            }
+
+
+            nav {
+               display: none;
+            }
+
+            .nav-lists{
+                display: none;
+            }
+             .icon{
+                display: block;
+             }
+
+            /* hero start */
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 62px 20px 40px;
+            }
+             .hero .villan{
+                width: 70%;
+                display: flex;
+                align-items: center;
+                gap: 40px;
+             }
+            .shoe-img{
+                width: 328px;
+            }
+             .hero-text{
+                padding: 0;
+             }
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .hero-text h2 {
+                font-size: 40px;
+            }
+
+            .hero-text p {
+                font-size: 18px;
+            }
+
+            .click {
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+
+
+            /* wardrobe Sections */
+            .wardrobe{
+                padding: 40px 20px;
+            }
+
+            .casual {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+            .cart{
+                order: -1;
+            }
+
+            /* layout */
+            .layout{
+                flex-direction: column;
+            }
+
+            .collect{
+                max-width: 100%;
+                min-width: 100%;
+                width: 80%;
+                height: 50%;
+            }
+
+            .collect-img {
+                height: 520px;
+            }
+            .info{
+                font-size: 16px;
+            }
+           
+            /* Features */
+            .disply {
+                padding: 40px 20px;
+                flex-direction: column;
+            }
+            .cart{
+                order: -1;
+            }
+            .dinfo p{
+                font-size: 19px;
+            }
+            .direction,
+            .cart {
+                min-width: 100%;
+            }
+
+            .direct{
+                padding: 20px;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            /* app*/
+            .app {
+                padding: 30px 20px;
+                
+            }
+
+            .app h3 {
+                font-size: 20px;
+               
+            }
+
+            .apple {
+                flex-direction: column;
+                font-size: 19px;
+            }
+            .apple input{
+              
+                font-size: 21px;
+            }
+            .apple button{
+              
+                font-size: 21px;
+            }
+
+            .apple input,
+            .apple button {
+                width: 100%;
+            }
+
+            /* Footer */
+            footer {
+                padding: 30px 20px;
+            }
+
+            .foot {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .foot {
+                min-width: 100%;
+                text-align: center;
+            }
+            .foot ul li a {
+                font-size: 19px;
             }
         }
